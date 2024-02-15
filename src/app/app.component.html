@@ -1,0 +1,29 @@
+Hello {{title}}
+
+<button type="button" [disabled]="IsDisabled">{{buttonText}}</button>
+<h2 [class.textColor]="textofcolor" >title</h2>
+
+<!-- <input [(ngModel)]="inputText" placeholder="Please input your text" /> -->
+
+<p> You entered text is {{inputText}}</p>
+
+<div [ngClass]="classes">
+
+  {{messages}}
+
+</div>
+
+<div *ngIf="isLoggedIn">You are welcome {{Username}} !!</div>
+<div *ngIf="!isLoggedIn">Please Sign in </div>
+
+<div *ngIf="isLoggedIn || resul">Login Content </div>
+
+{{ServiceData}}
+<h1>Posts</h1>
+
+<div *ngFor="let post of Posts">
+  <h3>{{post.title}}</h3>
+  <p>{{post.body}}</p>
+  <hr/>
+
+</div>
